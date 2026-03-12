@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Marian Pavlos</title>
+    <title>Marian Pavlos - Resume</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -35,6 +35,13 @@
             margin-bottom: 20px;
             font-size: 0.95em;
         }
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
         .experience-item, .education-item {
             margin-bottom: 15px;
         }
@@ -50,13 +57,20 @@
         .skills li, .projects li {
             background: #ecf0f1;
             margin: 5px 0;
-            padding: 10px;
+            padding: 15px;
             border-left: 4px solid #3498db;
             border-radius: 4px;
         }
         ul.job-tasks {
             margin-top: 5px;
             padding-left: 20px;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #2c3e50;
         }
     </style>
 </head>
@@ -66,7 +80,7 @@
         <p class="contact-info">
             <strong>Target Role:</strong> Junior System Administrator / Network Engineer<br>
             <strong>Location:</strong> Lviv, Ukraine | <strong>Phone:</strong> +380662689014<br>
-            <strong>Email:</strong> marian.pavlos.ki.2021@lpnu.ua | <strong>GitHub:</strong> github.com/MarianNULP
+            <strong>Email:</strong> marian.pavlos.ki.2021@lpnu.ua | <strong>GitHub:</strong> <a href="https://github.com/MarianNULP" target="_blank">github.com/MarianNULP</a>
         </p>
 
         <p>Detail-oriented IT specialist with a strong background in system administration, networking, and hardware setup. Quick learner with a proactive approach to problem-solving, committed to ensuring reliable and secure IT infrastructure.</p>
@@ -74,10 +88,10 @@
         <h2>Technical Skills</h2>
         <ul class="skills">
             <li><strong>Operating Systems:</strong> Linux (Oracle Linux, Ubuntu) & Windows Administration, Package Management, User Management</li>
-            <li><strong>Networking:</strong> TCP/IP, UDP, IPv6, Routing, Switch Setup, Firewall Configuration</li>
-            <li><strong>Web Services & Databases:</strong> Apache, Percona MySQL</li>
+            <li><strong>Networking:</strong> TCP/IP, UDP, IPv6, Routing, Switch Setup, Firewall Configuration, DNS Management</li>
+            <li><strong>Web Services & Databases:</strong> Apache, Percona MySQL, SSL/TLS (Let's Encrypt)</li>
             <li><strong>Tools & Automation:</strong> Git/GitHub, Bash Scripting, VS Code</li>
-            <li><strong>Cloud & CI/CD:</strong> AWS (EC2, Security Groups), GitHub Actions (Basic Level)</li>
+            <li><strong>Cloud & CI/CD:</strong> AWS (EC2, Security Groups), GitHub Actions</li>
             <li><strong>Languages:</strong> English (B1+), Ukrainian (Native)</li>
         </ul>
 
@@ -106,7 +120,12 @@
 
         <h2>Practical Projects</h2>
         <ul class="projects">
-            <li><strong>Automated Web Server Deployment on AWS (CI/CD)</strong> — Configured a Linux cloud server on AWS EC2, established network security rules, and implemented a GitHub Actions pipeline for automated website deployment triggered by Git pushes.</li>
+            <li>
+                <strong>Cloud Resume Hosting & Automated CI/CD Pipeline (This Website)</strong><br>
+                Engineered a complete cloud infrastructure to host this resume. Provisioned an <strong>AWS EC2</strong> instance running Ubuntu and configured an <strong>Apache</strong> web server. Managed DNS routing for a custom domain and secured the site with <strong>HTTPS</strong> using Let's Encrypt (Certbot). Developed a zero-downtime deployment pipeline using <strong>GitHub Actions</strong>, enabling automated code delivery via SSH upon every Git push.
+                <br>
+                <a class="project-link" href="https://github.com/MarianNULP/aws-cicd-project" target="_blank">🔗 View CI/CD Source Code on GitHub</a>
+            </li>
         </ul>
     </div>
 </body>
