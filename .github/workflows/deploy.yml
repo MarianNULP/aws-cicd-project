@@ -1,19 +1,23 @@
-name: Deploy to AWS (Draft)
+name: Deploy Resume to AWS
 
-# Цей блок вказує, КОЛИ запускати автоматизацію (при кожному push у гілку main)
 on:
   push:
     branches:
       - main
 
-# Цей блок описує ЩО саме робити
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest # GitHub виділить нам тимчасовий Linux-сервер для виконання задач
+  deploy:
+    runs-on: ubuntu-latest
     
     steps:
       - name: Get the code
         uses: actions/checkout@v3
         
-      - name: Test step (Echo)
-        run: echo "Код успішно оновлено! Тут пізніше буде команда для відправки на AWS."
+      - name: Copy index.html to AWS Server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "index.html"
+          target: "/var/www/html/"
