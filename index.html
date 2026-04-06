@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marian Pavlos - Resume(Let's make some change)</title>
+    <title>Marian Pavlos - Resume</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            line-height: 1.5;
             color: #333;
             max-width: 850px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f4f4f9;
+            background-color: #fff;
         }
-        .container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .header-text {
+            flex: 1;
+        }
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #3498db;
+            margin-left: 20px;
         }
         h1 {
             color: #2c3e50;
-            margin-bottom: 5px;
+            margin: 0 0 5px 0;
+            font-size: 2.2em;
         }
         h2 {
             color: #34495e;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-top: 25px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 3px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
         }
         .contact-info {
             color: #7f8c8d;
-            margin-bottom: 20px;
+            margin: 0;
             font-size: 0.95em;
         }
         .contact-info a {
@@ -42,8 +58,12 @@
         .contact-info a:hover {
             text-decoration: underline;
         }
-        .experience-item, .education-item {
+        .summary {
+            font-size: 0.95em;
             margin-bottom: 15px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 10px;
         }
         .date-location {
             color: #7f8c8d;
@@ -53,21 +73,23 @@
         .skills, .projects {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         .skills li, .projects li {
-            background: #ecf0f1;
-            margin: 5px 0;
-            padding: 15px;
-            border-left: 4px solid #3498db;
-            border-radius: 4px;
+            font-size: 0.95em;
+            margin: 4px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-left: 3px solid #3498db;
         }
         ul.job-tasks {
-            margin-top: 5px;
+            margin: 5px 0 0 0;
             padding-left: 20px;
+            font-size: 0.95em;
         }
         .project-link {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 5px;
             font-size: 0.9em;
             font-weight: bold;
             color: #2c3e50;
@@ -75,58 +97,58 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Marian Pavlos</h1>
-        <p class="contact-info">
-            <strong>Target Role:</strong> Junior System Administrator / Network Engineer<br>
+    <div class="header-container">
+        <div class="header-text">
+            <h1>Marian Pavlos</h1>
+<p class="contact-info">
+            <strong>Target Role:</strong> Technical Support Engineer (L2) / SRE<br>
             <strong>Location:</strong> Lviv, Ukraine | <strong>Phone:</strong> +380662689014<br>
-            <strong>Email:</strong> marian.pavlos.ki.2021@lpnu.ua | <strong>GitHub:</strong> <a href="https://github.com/MarianNULP" target="_blank">github.com/MarianNULP</a>
+            <strong>Email:</strong> marian.pavlos.ki.2021@lpnu.ua | <strong>GitHub:</strong> <a href="https://github.com/MarianNULP" target="_blank">github.com/MarianNULP</a><br> 
+			<strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/marian-pavlos-b92b4b379/" target="_blank">Marian Pavlos</a>
         </p>
-
-        <p>Detail-oriented IT specialist with a strong background in system administration, networking, and hardware setup. Quick learner with a proactive approach to problem-solving, committed to ensuring reliable and secure IT infrastructure.</p>
-
-        <h2>Technical Skills</h2>
-        <ul class="skills">
-            <li><strong>Operating Systems:</strong> Linux (Oracle Linux, Ubuntu) & Windows Administration, Package Management, User Management</li>
-            <li><strong>Networking:</strong> TCP/IP, UDP, IPv6, Routing, Switch Setup, Firewall Configuration, DNS Management</li>
-            <li><strong>Web Services & Databases:</strong> Apache, Percona MySQL, MySQL, SSL/TLS (Let's Encrypt)</li>
-            <li><strong>Monitoring & Cloud:</strong> Zabbix 7.0 (Server & Agent), AWS (EC2, Security Groups)</li>
-            <li><strong>Tools & Automation:</strong> Git/GitHub, GitHub Actions (CI/CD), Bash Scripting</li>
-            <li><strong>Languages:</strong> English (B1+), Ukrainian (Native)</li>
-        </ul>
-
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <strong>Sales Consultant & Tech Support Specialist</strong> | Brain (Electronics Retailer)
-            <div class="date-location">Dec 2023 - Apr 2025</div>
-            <ul class="job-tasks">
-                <li>Assisted with software installation and basic configuration of operating systems (Windows, Linux, macOS).</li>
-                <li>Supported network device setup, including routers, switches, and Wi-Fi access points.</li>
-                <li>Provided technical advice and hardware troubleshooting for customer devices.</li>
-            </ul>
         </div>
+        <img src="your-photo.jpg" alt="Marian Pavlos" class="profile-pic">
+    </div>
 
-        <h2>Education & Courses</h2>
-        <div class="education-item">
-            <strong>Linux & Network Administration Course</strong> | PortaOne
-        </div>
-        <div class="education-item">
-            <strong>Bachelor of Computer Engineering</strong> | Lviv Polytechnic National University
-            <div class="date-location">Aug 2021 - Jun 2025</div>
-            <ul class="job-tasks">
-                <li>Key coursework: Linux System & CLI, Computer Networking Fundamentals, Operating Systems.</li>
-            </ul>
-        </div>
+    <p class="summary">Detail-oriented Technical Support Specialist with a strong foundation in Linux OS and network protocols. Proven ability to handle L1-L2 incidents, analyze logs, and troubleshoot hardware/software issues. Highly motivated to progress into a DevOps/SRE role, possessing hands-on practical experience with AWS, CI/CD, and containers.</p>
 
-        <h2>Practical Projects</h2>
-        <ul class="projects">
-            <li>
-                <strong>Cloud Resume Hosting & Infrastructure Monitoring (This Website)</strong><br>
-                Engineered a complete cloud infrastructure on an <strong>AWS EC2</strong> Ubuntu instance. Configured an <strong>Apache</strong> web server, managed DNS routing for a custom domain, and enforced <strong>HTTPS</strong> via Let's Encrypt. Deployed <strong>Zabbix 7.0</strong> with a <strong>MySQL</strong> database for comprehensive infrastructure monitoring, including system metrics and Web Scenarios for uptime tracking. Optimized server performance by configuring Linux <strong>Swap</strong> space. Developed a CI/CD pipeline using <strong>GitHub Actions</strong> for automated deployment.
-                <br>
-                <a class="project-link" href="https://github.com/MarianNULP/aws-cicd-project" target="_blank">🔗 View CI/CD Source Code on GitHub</a>
-            </li>
+    <h2>Technical Skills</h2>
+    <ul class="skills">
+        <li><strong>Operating Systems:</strong> Linux, Windows</li>
+        <li><strong>Networking Core:</strong> TCP/IP, OSI model</li>
+        <li><strong>Cloud & Infrastructure:</strong> AWS, Docker</li>
+        <li><strong>Version Control & Automation:</strong> Git/GitHub, CI/CD pipelines (GitHub Actions)</li>
+        <li><strong>Languages:</strong> English (B1+ Intermediate), Ukrainian (Native)</li>
+    </ul>
+
+    <h2>Experience</h2>
+    <div class="experience-item">
+        <strong>Technical Support Specialist (L1)</strong> | Brain (Electronics Retailer)
+        <div class="date-location">Dec 2023 - Apr 2025</div>
+        <ul class="job-tasks">
+            <li>Handled incident reporting and provided L1-L2 technical support for software and hardware issues.</li>
+            <li>Configured and troubleshot operating systems (Linux, Windows) and network devices (routers, switches).</li>
+            <li>Accumulated technical data from clients to diagnose problems, perform root-cause analysis, and provide effective solutions.</li>
         </ul>
     </div>
+
+    <h2>Education & Certifications</h2>
+    <div class="education-item">
+        <strong>Linux & Network Administration Certificate</strong> | PortaOne
+    </div>
+    <div class="education-item">
+        <strong>Bachelor of Computer Engineering</strong> | Lviv Polytechnic National University
+        <div class="date-location">Aug 2021 - Jun 2025</div>
+    </div>
+
+    <h2>Practical Cloud Project</h2>
+    <ul class="projects">
+        <li>
+            <strong>AWS Infrastructure & CI/CD Pipeline (marianpavlos.me)</strong><br>
+            Provisioned and configured a Linux-based cloud infrastructure on an AWS instance. Managed networking rules, security groups, and DNS routing. Gained hands-on experience with containerization by deploying web applications via Docker. Automated the deployment process by writing a CI/CD pipeline using Git and GitHub Actions. 
+            <br>
+            <a class="project-link" href="https://github.com/MarianNULP/aws-cicd-project" target="_blank">🔗 View CI/CD Source Code on GitHub</a>
+        </li>
+    </ul>
 </body>
 </html>
